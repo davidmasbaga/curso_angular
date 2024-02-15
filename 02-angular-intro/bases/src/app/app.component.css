@@ -1,0 +1,21 @@
+h1{
+  font-family: 'Roboto';
+}
+
+p{
+  font-family:'Roboto';
+}
+
+
+.home-main{
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+
+.counters{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-top: 30px;
+}

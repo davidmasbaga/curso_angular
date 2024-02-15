@@ -1,0 +1,27 @@
+
+.fill:hover,
+.fill:focus {
+  box-shadow: inset 0 0 0 2em var(--hover);
+}
+
+button {
+  color: var(--color);
+  transition: 0.25s;
+
+  &:hover,
+  &:focus {
+
+   background: #028d14;
+  }
+}
+
+
+button {
+  background: none;
+  border: 1px solid;
+  border-radius: 15px;
+  font: inherit;
+  line-height: 1;
+  margin: 0.5em;
+  padding: 1em 2em;
+}
