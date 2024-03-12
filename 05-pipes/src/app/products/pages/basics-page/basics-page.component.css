@@ -1,0 +1,23 @@
+.bloque-codigo {
+  background-color: #0D1116; /* Color de fondo gris claro, típico de los bloques de código */
+  color: #cccccc; /* Color del texto oscuro para contraste */
+  font-family: monospace; /* Fuente monoespaciada para imitar el aspecto de código */
+  padding: 1em; /* Espaciado interno para separar el texto de los bordes */
+  margin: 1em 0; /* Margen exterior para separar del contenido circundante */
+   /* Borde sutil */
+  border-radius: 4px; /* Bordes redondeados */
+  white-space: pre-wrap; /* Mantiene el formato del texto, incluidos espacios y saltos de línea */
+  word-wrap: break-word; /* Asegura que el texto largo se ajuste dentro del bloque */
+  overflow-x: auto; /* Agrega desplazamiento horizontal si el contenido es demasiado ancho */
+}
+
+
+.code-title{
+  padding:5px;
+  color:rgb(108, 216, 1)
+}
+
+
+.card .p-card{
+  background-color: blue!important;
+}

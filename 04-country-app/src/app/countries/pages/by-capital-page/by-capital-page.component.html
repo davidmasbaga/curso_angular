@@ -5,9 +5,12 @@
   <div class="col">
     <!--Search Box-->
 <shared-search-box placeholder="Placeholder by capital"
- (onValue)="searchByCapital($event)">
+ (onDebounce)="searchByCapital($event)"
+ >
 
 </shared-search-box>
+
+
 
 
   </div>
@@ -15,9 +18,9 @@
 <div class="row">
   <div class="col">
     <hr>
-<ul>
+
   <countries-country-table [countries]="capital"></countries-country-table>
-</ul>
+
 
   </div>
 </div>

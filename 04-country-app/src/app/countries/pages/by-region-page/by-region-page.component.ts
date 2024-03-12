@@ -2,19 +2,36 @@ import { Component } from '@angular/core';
 import { CountriesService } from '../../services/countries.service';
 import { Country } from '../../interfaces/country';
 
+type ValidRegion = 'Africa'|'Americas'|'Asia'|'Europe'|'Oceania'
+
 @Component({
   selector: 'app-by-region-page',
   templateUrl: './by-region-page.component.html',
-  styles: ``
+  styles: ``,
 })
 export class ByRegionPageComponent {
+  public region: Country[] = [];
+  public regions: ValidRegion[] = [
 
-  public region:Country[]=[]
-  constructor(private countryService:CountriesService){}
+    'Africa',
+    'Americas',
+    'Asia',
+    'Europe',
+    'Oceania',
+  ];
+  public selectedRegion?:ValidRegion
 
-  searchByRegion(term:string){
-    this.countryService.searchRegion(term).subscribe(region=>this.region=region)
 
+
+  constructor(private countryService: CountriesService) {}
+
+
+
+  searchByRegion(region: ValidRegion):void {
+
+    this.selectedRegion =region
+    this.countryService
+      .searchRegion(region)
+      .subscribe((region) => (this.region = region));
   }
-
 }

@@ -1,0 +1,84 @@
+
+
+<p-panel header="Pipes Básicos" class="p-2">
+<p>Pipes incluidos en Angular - Usualmente en el common Module </p>
+</p-panel>
+
+
+
+  <div class="grid">
+
+    <p-card class="col-12 md:col-4  "  header="Uppercase">
+     ❌ {{nameLowerCase}} <span style="margin:0px 20px">|</span> ✅ {{nameLowerCase | lowercase}}
+     <div class="bloque-codigo" ngNonBindable><span class="code-title">Ejemplo:</span><br><br>{{ nameLowerCase | lowercase }}</div>
+
+    </p-card>
+    <p-card class="col-12 md:col-4 " header="Lowercase">
+      ❌: {{nameUpperCase}} <span style="margin:0px 20px">|</span> ✅ {{nameUpperCase | uppercase}}
+
+      <div class="bloque-codigo" ngNonBindable><span class="code-title">Ejemplo:</span><br><br>{{nameUpperCase | uppercase}}</div>
+    </p-card>
+    <p-card class="col-12 md:col-4 " header="Titlecase">
+
+     ❌ {{fullName}} <span style="margin:0px 20px">|</span> ✅  {{fullName | titlecase}}
+
+
+      <div class="bloque-codigo" ngNonBindable> <span class="code-title">Ejemplo:</span><br><br>{{fullName | titlecase}}</div>
+    </p-card>
+    <p-card class="col-12 md:col-6  " header="Custom Date">
+
+
+        <li class="mb-2 list-none"> ❌ {{customDate}}</li>
+        <li class="mb-2 list-none"> ✅ {{customDate| date }} </li>
+        <li class="mb-2 list-none"> ✅ {{customDate| date:'short' }} </li>
+        <li class="mb-2 list-none"> ✅ {{customDate| date:'long' }} </li>
+        <li class="mb-2 list-none"> ✅ {{customDate| date:'MMMM' }} </li>
+        <li class="mb-2 list-none"> ✅ {{customDate| date:'MMMM dd, yyyy' }} </li>
+        <li class="mb-2 list-none"> ✅ {{customDate| date:'MMMM dd, yyyy' }} </li>
+
+
+       <div class="bloque-codigo" ngNonBindable> <span class="code-title">Ejemplo:</span>
+        <br>
+        <br>{{customDate| date }}
+        <br>{{customDate| date:'short' }}
+        <br>{{customDate| date:'long' }}
+        <br>{{customDate| date:'MMMM' }}
+        <br>{{customDate| date:'MMMM dd, yyyy' }}
+
+
+      </div>
+     </p-card>
+
+     <p-card class="  col-12 md:col-6" header="Custom Date Time Zone">
+
+
+      <li class="mb-2 list-none"> ❌ {{customDate}}</li>
+      <li class="mb-2 list-none"> ✅ {{customDate| date:'long':'' }} </li>
+      <li class="mb-2 list-none"> ✅ {{customDate| date:'long':'GMT-6' }} </li>
+
+      <li class="mb-2 list-none"> ✅ 🇫🇷 {{customDate| date:'long':'':'fr' }} </li>
+      <li class="mb-2 list-none"> ✅ 🇪🇸 {{customDate| date:'long':'':'es' }} </li>
+      <li class="mb-2 list-none"> ✅ 🇷🇺 {{customDate| date:'long':'GMT+3':'ru' }} </li>
+
+
+
+     <div class="bloque-codigo" ngNonBindable> <span class="code-title">Ejemplo:</span>
+      <br>
+      <br>{{customDate| date }}
+      {{customDate| date:'long':'' }}
+      <br>{{customDate| date:'long':'GMT-6' }}
+      <br>{{customDate| date:'long':'':'fr' }}
+      <br>{{customDate| date:'long':'':'es' }}
+      <br>{{customDate| date:'long':'GMT+3':'ru' }}
+
+
+
+    </div>
+   </p-card>
+
+
+
+  </div>
+
+
+
