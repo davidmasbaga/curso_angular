@@ -1,0 +1,73 @@
+
+
+<p-panel header="Pipes Básicos" class="p-2">
+  <p>Pipes incluidos en Angular - Usualmente en el common Module </p>
+  </p-panel>
+
+
+
+    <div class="grid">
+
+      <p-card class="col-12 md:col-4  "  header="Ventas Netas">
+       <li class="list-none">❌ {{totalSales}} <span style="margin:0px 20px">|</span> ✅ {{totalSales| number:'1.2-2':'fr' }}</li>
+       <li class="list-none">❌ {{totalSales}} <span style="margin:0px 20px">|</span> ✅ {{totalSales| number:'1.2-2' }}</li>
+       <li class="list-none">❌ {{totalSales}} <span style="margin:0px 20px">|</span> ✅ {{totalSales| number:'1.2-4' }}</li>
+
+
+       <div class="bloque-codigo" ngNonBindable><span class="code-title">Ejemplo:</span><br>
+        <br>{{totalSales| number:'1.2-2':'fr' }} -> Formato FR-ES
+        <br>{{totalSales| number:'1.2-2' }} -> Formato EUA 2 decims
+        <br>{{totalSales| number:'1.2-4' }} -> Formato EUA 4 decims
+
+      </div>
+      </p-card>
+
+      <p-card class="col-12 md:col-4  "  header="Ventas Brutas">
+        <li class="list-none">❌ {{totalSalesRaw}} <span style="margin:0px 20px">|</span> ✅ {{totalSalesRaw| currency }}</li>
+        <li class="list-none">❌ {{totalSalesRaw}} <span style="margin:0px 20px">|</span> ✅ {{totalSalesRaw| currency:'EUR' }}</li>
+        <li class="list-none">❌ {{totalSalesRaw}} <span style="margin:0px 20px">|</span> ✅ {{totalSalesRaw| currency:'USD' }}</li>
+        <li class="list-none">❌ {{totalSalesRaw}} <span style="margin:0px 20px">|</span> ✅ {{totalSalesRaw| currency:'USD':'symbol-narrow' }}</li>
+        <li class="list-none">❌ {{totalSalesRaw}} <span style="margin:0px 20px">|</span> ✅ {{totalSalesRaw| currency:'HNL':'symbol-narrow':'1.1-1' }}</li>
+
+
+
+        <div class="bloque-codigo" ngNonBindable><span class="code-title">Ejemplo:</span><br>
+         <br>{{totalSalesRaw| currency }} -> $ by Default
+         <br>{{totalSalesRaw| currency:'EUR' }} -> Currency Euro
+         <br>{{totalSalesRaw| number:'1.2-4' }} -> Formato EUA 4 decims
+         <br>{{totalSalesRaw| currency:'USD':'symbol-narrow' }}
+         <br>{{totalSalesRaw| currency:'HNL':'symbol-narrow' }}
+
+
+       </div>
+       </p-card>
+
+       <p-card class="col-12 md:col-4  "  header="Ganancia Porcentual">
+        <li class="list-none">❌ {{percent}} <span style="margin:0px 20px">|</span> ✅ {{percent| percent}}</li>
+        <li class="list-none">❌ {{percent}} <span style="margin:0px 20px">|</span> ✅ {{percent| percent:'1.2-2'}}</li>
+        <li class="list-none">❌ {{percent}} <span style="margin:0px 20px">|</span> ✅ {{percent| percent:'2.1-3'}}</li>
+        <li class="list-none">❌ {{percent}} <span style="margin:0px 20px">|</span> ✅ {{percent| percent:'1.1-1'}}</li>
+
+
+
+        <div class="bloque-codigo" ngNonBindable><span class="code-title">Ejemplo:</span><br>
+         <br>{{percent| percent}}
+         <br>{{percent| percent:'1.2-2'}}
+         <br>{{percent| percent:'2.1-3'}}
+         <br>{{percent| percent:'1.1-1'}}
+
+
+
+       </div>
+       </p-card>
+
+
+
+
+
+
+
+    </div>
+
+
+

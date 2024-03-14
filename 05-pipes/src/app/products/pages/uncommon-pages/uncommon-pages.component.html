@@ -1,0 +1,114 @@
+<p-panel header="Pipes Básicos" class="p-2">
+  <p>Pipes incluidos en Angular - Pipes no tan comunes</p>
+</p-panel>
+
+<div class="grid">
+  <p-fieldset
+    class="col-8 md:col-6"
+    legend="i18nSelect Pipe"
+    [toggleable]="true"
+  >
+  <p> Saludos {{name}} es un placer {{gender|i18nSelect:invitationMap}} a nuestro evento</p>
+  <p-button (click)="changePerson()" label="Cambiar Persona"></p-button>
+
+  <div class="bloque-codigo" ngNonBindable> <span class="code-title">Ejemplo:</span>
+    <br>
+    <br>{{gender|i18nSelect:invitationMap}}
+    <br>
+    <br><span style="color:rgb(173, 173, 173)"> gender: 'male' | 'female' = 'male'</span>
+    <br><span style="color:rgb(173, 173, 173)">  public invitationMap = &lbrace;'male': 'invitarlo', 'female':'invitarla'&rbrace; </span>
+
+
+  </div>
+  </p-fieldset>
+
+
+  <p-fieldset
+  class="col-8 md:col-6"
+  legend="i18nPlural Pipe"
+  [toggleable]="true"
+>
+<p>Actualmente {{clients.length | i18nPlural:clientsMap | lowercase}}</p>
+<p-button (click)="deleteClient()" label="Eliminar cliente"></p-button>
+
+<div class="bloque-codigo" ngNonBindable> <span class="code-title">Ejemplo:</span>
+  <br>
+  <br>Actualmente {{clients.length | i18nPlural:clientsMap | lowercase}}
+  <br>
+  <br><span style="color:rgb(173, 173, 173)"> gender: 'male' | 'female' = 'male'</span>
+  <br><span style="color:rgb(173, 173, 173)">  public clientsMap= &lbrace;
+    '=0':'No tenemos ningun cliente esperando',
+    '=1':'Tenemos 1 cliente esperando',
+    'other':'Tenemos # clientes esperando'
+  &rbrace; </span>
+
+
+</div>
+
+</p-fieldset>
+
+  <p-fieldset class="col-8 md:col-6" legend="Slice Pipe" [toggleable]="true">
+    <p>{{clients | slice:0:4}}</p>
+    <p>{{clients | slice:0:2}}</p>
+    <p>{{clients | slice:2:-1}}</p>
+    <div class="bloque-codigo" ngNonBindable> <span class="code-title">Ejemplo:</span>
+      <br>
+      <br>{{clients | slice:0:4}}
+      <br>{{clients | slice:0:2}}
+      <br>{{clients | slice:2:-1}}
+
+
+
+    </div>
+  </p-fieldset>
+  <p-fieldset class="col-8 md:col-6" legend="Json Pipe" [toggleable]="true">
+    <p> Sin Pipe: {{invitationMap}}</p>
+   <p> Con Pipe: {{invitationMap | json}}</p>
+   <p> Con Pipe: {{randomObject | json}}</p>
+   <div class="bloque-codigo" ngNonBindable> <span class="code-title">Ejemplo:</span>
+    <br>
+    <br>Sin Pipe: {{invitationMap}}
+    <br>Con Pipe: {{invitationMap | json}}
+    <br>Con Pipe: {{randomObject | json}}
+
+
+
+  </div>
+
+  </p-fieldset>
+  <p-fieldset class="col-8 md:col-6" legend="Key Value Pipe" [toggleable]="true">
+    <p> Transforma objetos en arrays para poderlos recorrer</p>
+    <ul>
+      <li class="list-none" *ngFor="let item of randomObject | keyvalue"><b>{{item.key | titlecase}}</b>: {{item.value}}</li>
+    </ul>
+    <div class="bloque-codigo" ngNonBindable> <span class="code-title">Ejemplo:</span>
+      <br>
+      <br>*ngFor="let item of randomObject | keyvalue">{{item.key | titlecase}}: {{item.value}}
+
+
+
+
+    </div>
+  </p-fieldset>
+  <p-fieldset class="col-8 md:col-6" legend="Async Pipe" [toggleable]="true">
+    <pre *ngIf="!(myObservableTimer | async)" >Resolviendo observable...</pre>
+    <pre *ngIf="(promiseValue | async)" >{{promiseValue | async}}</pre>
+
+    <div class="bloque-codigo" ngNonBindable> <span class="code-title">Ejemplo:</span>
+      <br>
+      <br>*ngIf="!(myObservableTimer | async)" >Resolviendo observable...
+      <br>*ngIf="(promiseValue | async)" >Contando cada dos segundos: {{promiseValue | async}}
+      <br>
+      <br><span style="color:rgb(160, 160, 160)">public myObservableTimer = interval(2000).pipe( tap(value=>console.log(value)) )</span>
+
+
+
+
+    </div>
+
+  </p-fieldset>
+
+
+
+
+</div>

@@ -1,4 +1,14 @@
-<div *ngIf="countries.length===0;else table" class="alert alert-warning  text-center " >No hay países que mostrar</div>
+<div *ngIf="status === 'loading'; else content">
+  <ng-container *ngTemplateOutlet="skeleton"></ng-container>
+</div>
+
+<ng-template #content>
+  <div *ngIf="countries.length===0;else table" class="alert alert-warning  text-center " >No hay países que mostrar</div>
+</ng-template>
+
+
+
+
 
 <ng-template #table>
 
@@ -31,5 +41,11 @@
 
 
 </table>
+
+</ng-template>
+
+<ng-template #skeleton>
+
+<app-table-skeleton/>
 
 </ng-template>

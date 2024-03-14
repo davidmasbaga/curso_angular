@@ -14,7 +14,12 @@ public capital:Country[]=[]
 constructor(
   private countriesService:CountriesService
 
-  ){}
+  ){
+
+
+  }
+
+
 
 searchByCapital(term:string){
 this.countriesService.searchCapital(term).subscribe(countries=>{
@@ -24,5 +29,8 @@ this.capital= countries
 
 
 }
+
+
+
 
 }
