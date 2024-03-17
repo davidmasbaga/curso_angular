@@ -12,8 +12,9 @@
       "superhero": "Batman",
       "publisher": "DC Comics",
       "alter_ego": "Bruce Wayne",
-      "first_appearance": "Detective Comics #27",
-      "characters": "Bruce Wayne"
+      "first_appearance": "Detective Comics 27",
+      "characters": "Bruce Wayne",
+      "alt_img": "https://static.posters.cz/image/750/posters/batman-comic-i4516.jpg"
     },
     {
       "id": "dc-superman",
@@ -59,7 +60,7 @@
       "id": "dc-martian",
       "superhero": "Martian Manhunter",
       "publisher": "DC Comics",
-      "alter_ego": "J\"onn J\"onzz",
+      "alter_ego": "Jonn Jonzz",
       "first_appearance": "Detective Comics #225",
       "characters": "Martian Manhunter"
     },
@@ -158,14 +159,6 @@
       "alter_ego": "Scott Summers",
       "first_appearance": "X-Men #1",
       "characters": "Scott Summers"
-    },
-    {
-      "id": "marvel-silver",
-      "superhero": "Silver Surfer",
-      "publisher": "Marvel Comics",
-      "alter_ego": "Norrin Radd",
-      "first_appearance": "The Fantastic Four #48",
-      "characters": "Norrin Radd"
     }
   ]
 }
