@@ -1,4 +1,8 @@
 import { Component } from '@angular/core';
+import { AuthService } from '../../../auth/services/auth.service';
+import { User } from '../../../auth/interfaces/user.interface';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'layout-hero-page',
@@ -7,6 +11,14 @@ import { Component } from '@angular/core';
 })
 export class LayoutHeroPageComponent {
 
+  constructor(private authService:AuthService , private router:Router){
+
+  }
+
+get currentUser():User  | undefined{
+return this.authService.currentUser
+
+}
 
   public sidebarItems =[
     {
@@ -25,4 +37,11 @@ export class LayoutHeroPageComponent {
       url:'./search'
     },
   ]
+
+
+  onLogout(){
+    this.authService.logout();
+    this.router.navigate(['/auth/login'])
+
+  }
 }
