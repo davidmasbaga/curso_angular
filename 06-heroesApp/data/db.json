@@ -2,7 +2,7 @@
   "users": [
     {
       "id": 1,
-      "usuario": "John Doe",
+      "user": "John Doe",
       "email": "john.due@gmail.com"
     }
   ],
@@ -13,7 +13,8 @@
       "publisher": "DC Comics",
       "alter_ego": "Bruce Wayne",
       "first_appearance": "Detective Comics #27",
-      "characters": "Bruce Wayne"
+      "characters": "Bruce Wayne",
+      "alt_img": null
     },
     {
       "id": "dc-superman",
@@ -37,15 +38,17 @@
       "publisher": "DC Comics",
       "alter_ego": "Alan Scott",
       "first_appearance": "All-American Comics #16",
-      "characters": "Alan Scott, Hal Jordan, Guy Gardner, John Stewart, Kyle Raynor, Jade, Sinestro, Simon Baz"
+      "characters": "Alan Scott, Hal Jordan, Guy Gardner",
+      "alt_img": null
     },
     {
       "id": "dc-arrow",
-      "superhero": "Green Arrow",
+      "superhero": "Green Arrow ",
       "publisher": "DC Comics",
       "alter_ego": "Oliver Queen",
       "first_appearance": "More Fun Comics #73",
-      "characters": "Oliver Queen"
+      "characters": "Oliver Queen",
+      "alt_img": null
     },
     {
       "id": "dc-wonder",
@@ -165,7 +168,8 @@
       "publisher": "Marvel Comics",
       "alter_ego": "Norrin Radd",
       "first_appearance": "The Fantastic Four #48",
-      "characters": "Norrin Radd"
+      "characters": "Norrin Radd",
+      "alt_img": null
     }
   ]
 }

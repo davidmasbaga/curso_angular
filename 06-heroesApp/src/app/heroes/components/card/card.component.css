@@ -1,0 +1,13 @@
+.custom-badge{
+  display: inline-block;
+
+  background-color: #bea9e2; /* Ejemplo para bg-blue-100 */
+  color: #3d3d3d; /* Ejemplo para text-blue-800 */
+  padding: 0.05rem 0.8rem; /* Ajuste para px-2.5 y py-0.5 */
+  font-size: 0.7rem; /* Para text-sm */
+  font-weight: 500; /* Para font-medium */
+  border-radius: 0.8rem;
+  overflow: hidden;
+  margin: 1px 2px
+
+}

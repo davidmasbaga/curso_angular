@@ -1,1 +1,53 @@
-<p>hero-page works!</p>
+
+
+<ng-template #divLoading>
+
+<mat-grid-list cols="1">
+  <mat-grid-tile>
+    <h1>Esperando</h1>
+<mat-spinner></mat-spinner>
+  </mat-grid-tile>
+</mat-grid-list>
+</ng-template>
+
+
+<div  *ngIf="hero; else divLoading"  class="grid">
+
+<mat-card class=" flex-row justify-content-center  gap-3  col-6 sm:col-4">
+  <img [src]="hero|heroImagePipe" [alt]="hero.superhero" mat-card-image>
+
+
+
+</mat-card>
+
+
+<mat-card class="col-12 sm:col-8">
+  <mat-card-header>
+    <mat-card-title class="text-2xl pb-4  ">
+      {{hero.alter_ego}}
+    </mat-card-title>
+    <mat-card-subtitle class="text-6xl ">
+      {{hero.superhero}}
+    </mat-card-subtitle>
+  </mat-card-header>
+<div class="flex-row mt-4 p-3 ">
+  <custom-chip *ngFor="let name of hero.characters.split(',') | slice:0:3" [data]="name"></custom-chip>
+</div>
+  <mat-card-content>
+    <mat-list>
+      <mat-list-item> <b>First Appareance: </b> {{hero.first_appearance}}</mat-list-item>
+      <mat-list-item> <b>Characters: </b>{{hero.characters}}</mat-list-item>
+      <mat-list-item> <b>Company: </b>{{hero.publisher}}</mat-list-item>
+      <mat-list-item><b>Alter Ego: </b> {{hero.alter_ego}}</mat-list-item>
+    </mat-list>
+
+    <button class="ml-2" mat-button mat-raised color="warn" (click)="goBack()"><mat-icon>redo</mat-icon>Regresar</button>
+  </mat-card-content>
+
+
+
+</mat-card>
+
+
+</div>
+
